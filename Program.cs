@@ -11,6 +11,7 @@ namespace Sem3ReWrite
         public static string url = "http://localhost:8000/";
         public static int pageViews = 0;
         public static int requestCount = 0;
+
         public static string pageData = 
             "<!DOCTYPE>" +
             "<html>" +
@@ -24,7 +25,7 @@ namespace Sem3ReWrite
             "    </form>" +
             "  </body>" +
             "</html>";
-        
+
         public static void Main(string[] args)
         {
             listener = new HttpListener();
@@ -39,6 +40,7 @@ namespace Sem3ReWrite
             // Close the listener
             listener.Close();
         }
+
         public static async Task HandleIncomingConnections()
         {
             bool runServer = true;
@@ -61,20 +63,17 @@ namespace Sem3ReWrite
                 // Console.WriteLine(req.UserAgent);
                 // Console.WriteLine();
 
-                // If `shutdown` url requested w/ POST, then shutdown the server after serving the page
-                if ((req.HttpMethod == "POST") && (req.Url.AbsolutePath == "/shutdown"))
-                {
-                    Console.WriteLine("Shutdown requested");
-                    runServer = false;
-                }
-                
                 // Write the response info
                 string disableSubmit = !runServer ? "disabled" : "";
-                byte[] data;
+                byte[] data = new byte[] { };
                 
                 if (req.Url.AbsolutePath.Contains("helloThere"))
                 {
                     data = Encoding.UTF8.GetBytes("tester");
+                }
+                else if (req.HttpMethod == "POST" && req.Url.AbsolutePath == "/shutdown")
+                {
+                    runServer = false;
                 }
                 else 
                 {
