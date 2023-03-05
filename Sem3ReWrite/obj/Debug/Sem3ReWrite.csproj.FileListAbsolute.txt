@@ -1,7 +1,0 @@
-C:\Users\Primal One\Desktop\RandomProjects\Sem3ReWrite\bin\Debug\Sem3ReWrite.exe
-C:\Users\Primal One\Desktop\RandomProjects\Sem3ReWrite\bin\Debug\Sem3ReWrite.pdb
-C:\Users\Primal One\Desktop\RandomProjects\Sem3ReWrite\obj\Debug\Sem3ReWrite.csproj.AssemblyReference.cache
-C:\Users\Primal One\Desktop\RandomProjects\Sem3ReWrite\obj\Debug\Sem3ReWrite.csproj.SuggestedBindingRedirects.cache
-C:\Users\Primal One\Desktop\RandomProjects\Sem3ReWrite\obj\Debug\Sem3ReWrite.csproj.CoreCompileInputs.cache
-C:\Users\Primal One\Desktop\RandomProjects\Sem3ReWrite\obj\Debug\Sem3ReWrite.exe
-C:\Users\Primal One\Desktop\RandomProjects\Sem3ReWrite\obj\Debug\Sem3ReWrite.pdb
