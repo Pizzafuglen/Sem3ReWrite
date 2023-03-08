@@ -34,11 +34,17 @@ namespace Sem3ReWrite
             {
                 switch (req.Url.AbsolutePath)
                 {
-                    case "/statecurrent":
+                    case "/currentstate":
                         data = Encoding.UTF8.GetBytes(OpcUaRead.ReadNodeValue("ns=6;s=::Program:Cube.Status.StateCurrent"));
                         break;
                     case "/currentbatchid":
                         data = Encoding.UTF8.GetBytes(OpcUaRead.ReadNodeValue("ns=6;s=::Program:Cube.Status.Parameter[0].Value"));
+                        break;
+                    case "/currentamountproduced":
+                        data = Encoding.UTF8.GetBytes(OpcUaRead.ReadNodeValue("::Program:Cube.Admin.ProdProcessedCount"));
+                        break;
+                    case "/currenttemperature":
+                        data = Encoding.UTF8.GetBytes(OpcUaRead.ReadNodeValue("::Program:Cube.Status.Parameter[3].Value"));
                         break;
                     case "/shutdown":
                         runServer = false;

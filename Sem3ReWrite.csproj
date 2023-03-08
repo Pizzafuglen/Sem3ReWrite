@@ -75,6 +75,7 @@
         <Compile Include="OldIncomingHandler.cs" />
         <Compile Include="HTTPHandler.cs" />
         <Compile Include="OpcUARead.cs" />
+        <Compile Include="OpcUAWrite.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>
